@@ -1,5 +1,6 @@
 package com.example.springproject.restservice;
 
+
 public class Greeting {
     long id;
     String content;
