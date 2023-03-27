@@ -7,13 +7,19 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.util.Hashtable;
 
 @SpringBootApplication
 public class SpringProjectApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(SpringProjectApplication.class, args);
+	}
+	public void createDir(File dir) {
+		if (dir != null || !dir.exists()) // BAD
+			dir.mkdir();
 	}
 
 	public void jndiLookup(HttpServletRequest request) throws NamingException {
