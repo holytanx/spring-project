@@ -8,11 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+class ProductDTO extends Product{
+}
+
 @RequestMapping("/api/products")
 public interface IProductController {
 
     @PostMapping
-    ResponseEntity<Boolean> add(@RequestBody Product product);
+    ResponseEntity<Boolean> add(@RequestBody ProductDTO product);
 
     @GetMapping
     public ResponseEntity<List<Product>> list();
