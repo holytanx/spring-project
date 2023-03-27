@@ -14,10 +14,11 @@ import java.util.Hashtable;
 public class SpringProjectApplication {
 
 	public static void main(String[] args) {
-
+		File a = new File("/usr/local/bin/geeks");
+		createDir(a);
 		SpringApplication.run(SpringProjectApplication.class, args);
 	}
-	public void createDir(File dir) {
+	public static void createDir(File dir) {
 		if (dir != null || !dir.exists()) // BAD
 			dir.mkdir();
 	}
