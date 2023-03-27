@@ -13,7 +13,7 @@ public class ProductController implements IProductController {
     private ProductService service;
 
     @Override
-    public ResponseEntity<Boolean> add(Product product) {
+    public ResponseEntity<Boolean> add(ProductDTO product) {
         return service.save(product);
     }
 
